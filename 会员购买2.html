@@ -1,0 +1,37 @@
+<html lang="zh-cn">
+<head> 
+<meta charset="gb2312" />
+<font size="6">会员购买</font><br/>
+<font size="2">选择后请点击确认（注意：如果您选择了包年点击确认后想买包月请务必再次点击确认，否则后果自负）</font><br/>
+<a href="http://wpa.qq.com/msgrd?v=3&uin=1392869969&site=qq&menu=yes">点击联系客服</a> 
+<font size="2">购买后请将付款截图发送给客服并激活会员</font><br/>
+
+
+<script type="text/javascript"> 
+
+	function showImg(){
+		var ck = document.getElementsByName("test");
+		for(i=0; i<=ck.length;i++){
+			if(ck[i].checked){
+				if(ck[i].value == 1){
+					//包年的图片
+					document.getElementById('erweima').src = "https://i.ibb.co/z8NtndL/40.png";
+				}else{
+					//包月的图片
+					document.getElementById('erweima').src = "https://i.ibb.co/vVJwrpH/5.png";
+				}
+			}
+		}
+	}
+</script> 
+</head> 
+<body> 
+<input type="radio" name="test" value="1" checked>包年 
+<input type="radio" name="test" value="2" >包月
+<p>
+	<img  id="erweima" />
+</p>
+<button onclick="showImg()">确认</button> 
+
+</body>
+</html>
